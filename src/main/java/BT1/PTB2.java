@@ -1,42 +1,38 @@
+// Giải phương trình bậc 2
 package BT1;
-import java.util.Scanner;
 public class PTB2 {
-    public static void main(String[] args) {
-        float a, b, c, delta;
-        float x1, x2;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Giải phương trình bậc 2: Ax^2 + Bx + C = 0 \nNhập giá trị A: ");
-        a = scanner.nextFloat();
-        System.out.println("Nhập giá trị B: ");
-        b = scanner.nextFloat();
-        System.out.println("Nhập giá trị C: ");
-        c = scanner.nextFloat();
+    public String PTB2(double a, double b, double c) {
+        double delta;
+        double x1, x2;
+        //String kq = "";
+
     // Kiem tra gia tri a
         if (a == 0) {
             if (b == 0) {
                 if (c == 0) {
-                    System.out.println("Phương trình vô số nghiệm");
+                   return "Phuong trinh vo so nghiem";
                 }
                 else {
-                    System.out.println("Phương trình vô nghiệm");
+                    return "Phuong trinh vo nghiem";
                 }
             }
             else {
-                System.out.println("Phương trình có 1 nghiệm: x = "+ (-c/b));
+                x1 = (double) Math.round(-c/b*100)/100;
+                return "Phuong trinh co 1 nghiem: x = " + x1;
             }
         }
         else {
             delta = b * b - 2 * a * c;
             if (delta > 0) {
-                x1 = (float) (-b + Math.sqrt(delta)) / 2 / a;
-                x2 = (float)(-b - Math.sqrt(delta)) / 2 / a;
-                System.out.println("Phương trình có 2 nghiệm: x1 = " + x1 + " và x2 = " + x2);
+                x1 = (double) Math.round(((-b + Math.sqrt(delta)) / 2 / a)*100)/100;
+                x2 = (double) Math.round(((-b - Math.sqrt(delta)) / 2 / a)*100)/100;
+                return "Phuong trinh co 2 nghiem: x1 = " + x1 + " va x2 = " + x2;
             } else {
                 if (delta == 0) {
-                    x1 = (-b / 2 / a);
-                    System.out.println("Phương trình có 1 nghiệm kép: x1 = x2 = " + x1);
+                    x1 = (double) Math.round((-b / 2 / a)*100)/100;
+                    return "Phuong trinh co 1 nghiem kep: x1 = x2 = " + x1;
                 } else {
-                    System.out.println("Phương trình vô nghiệm");
+                    return "Phuong trinh vo nghiem";
                 }
             }
         }

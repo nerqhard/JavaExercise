@@ -2,19 +2,20 @@
 package BT1;
 import java.util.Scanner;
 public class Fibonaci {
-    public static void main(String[] arsg) {
-        int n, tam;
+    public String Fibonaci(int n) {
+        int tam;
         int f1 = 1;
         int f2 = 1;
-        Scanner scanner = new Scanner(System.in);
-        // Nhập số nguyên
-        System.out.println("Nhập vào số nguyên: ");
-        n = scanner.nextInt();
+        StringBuffer str = new StringBuffer();
         while (f1 <= n) {
-            System.out.print(f1+" ");
+            str.append(f1);
             tam = f2;
             f2 += f1;
             f1 = tam;
+            if (f1<=n) {
+                str.append(" ");
+            }
         }
+    return str.toString();
     }
 }
