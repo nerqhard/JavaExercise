@@ -5,7 +5,7 @@ public class TongdaysoTest {
 
     @Test
     public void tongdayso() {
-        assertEquals(new Tongdayso().TDSo(12),728);
-        assertEquals(new Tongdayso().TDSo(-5),0);
+        assertEquals(new Tongdayso().tdso(12),728);
+        assertEquals(new Tongdayso().tdso(-5),0);
     }
 }
