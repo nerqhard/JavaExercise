@@ -1,11 +1,9 @@
 public class Giaithua {
     public long giaithua(int n) {
         long gt = 1;
-        int i = 1;
-        while (i<=n) {
+        for (int i = 1; i<=n; i++) {
             gt *= i;
-            i ++;
         }
-    return gt;
+        return gt;
     }
 }
