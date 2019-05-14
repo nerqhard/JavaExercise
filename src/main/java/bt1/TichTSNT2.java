@@ -1,32 +1,28 @@
 // Bài 3: Phân tích một số nguyên thành tích lũy thừa của thừa số nguyên tố
-package BT1;
+package bt1;
 
 public class TichTSNT2 {
-    public String tichTSTN2(int a) {
-        int i, somu;
+
+    public String tichtstn2(int a) {
         StringBuffer kq = new StringBuffer();
         if (a <= 1) {
-            kq.append("So vua nhap khong phai so nguyen!!!");
-            return kq.toString();
+            return "So vua nhap khong phai so nguyen!!!";
         }
-        for (i=2; i <= a; i++) {
-            somu = 0;
+        for (int i=2; i <= a; i++) {
+            int somu = 0;
             while (a%i == 0) {
                 somu += 1;
                 a /= i;
             }
             if (somu >=1) {
-                if (somu == 1) {
-                    kq.append(i);
-                }
-                else {
-                    kq.append(i).append("^").append(somu);
+                kq.append(i);
+                if (somu > 1) {
+                    kq.append("^" + somu);
                 }
                 if (a > i) {
                     kq.append(" * ");
                 }
             }
-
         }
         return kq.toString();
     }
