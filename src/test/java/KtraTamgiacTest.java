@@ -10,5 +10,6 @@ public class KtraTamgiacTest {
         assertEquals(new KtraTamgiac().ktratgiac(6,6,8),"Tam giac can. Dien tich: 17.89. Chu vi: 20.00" );
         assertEquals(new KtraTamgiac().ktratgiac(4,5,7),"Tam giac thuong. Dien tich: 9.80. Chu vi: 16.00" );
         assertEquals(new KtraTamgiac().ktratgiac(4,5,10),"Tam giac khong ton tai!!!" );
+        assertEquals(new KtraTamgiac().ktratgiac(5,5,5),"Tam giac deu. Dien tich: 10.83. Chu vi: 15.00" );
     }
 }
