@@ -8,26 +8,25 @@ public class Timchuso {
         }
         return count;
     }
+    public static int valid (int n) {
+        int s = 0;
+        int m = demcs(n);
+        int a = n % 10;
+        int b = n;
+        while (b > 0){
+            s += Math.pow(a, m);
+            b /= 10;
+            a = b % 10;
+        }
+        return s;
+    }
     public String timcso() {
         StringBuffer kq = new StringBuffer();
         for (int i = 10; i <= 99999; i++) {
-            int s = 0;
-            int m = demcs(i);
-            int a = i % 10;
-            int b = i;
-            while (b > 0){
-                s += Math.pow(a, m);
-                b /= 10;
-                a = b % 10;
-            }
-            if (s == i) {
-                if (kq.length() == 0) {
-                    kq.append(i);
-                } else {
-                    kq.append(" " + i);
-                }
+            if (valid(i) == i) {
+                    kq.append(i + " ");
             }
         }
-        return kq.toString();
+        return kq.toString().trim();
     }
 }
