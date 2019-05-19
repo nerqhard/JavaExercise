@@ -6,7 +6,6 @@ public class TamgiacPascalTest {
 
     @Test
     public void test_tgpascal() {
-        assertEquals(new TamgiacPascal().tgpascal(4),"1 3 3 1");
-        assertEquals(new TamgiacPascal().tgpascal(6),"1 5 10 10 5 1");
+        assertArrayEquals(new TamgiacPascal().tgpascal(7), new int[]{1, 7, 21, 35, 35, 21, 7, 1});
     }
 }
