@@ -17,7 +17,7 @@ public class TichTSNT2 {
             if (somu >=1) {
                 kq.append(i);
                 if (somu > 1) {
-                    kq.append("^" + somu);
+                    kq.append("^").append(somu);
                 }
                 if (a > i) {
                     kq.append(" * ");
