@@ -3,15 +3,13 @@ public class TongFibonacci {
     public int tongfibo(int n) {
         int f1 = 0;
         int f2 = 1;
-        int s = 0;
-        int count = 1;
-        while (count <= n) {
+        int sum = 0;
+        for (int count = 1; count <= n; count++) {
             int temp = f2;
-            s += f2;
+            sum += f2;
             f2 += f1;
             f1 = temp;
-            count++;
         }
-        return s;
+        return sum;
     }
 }
