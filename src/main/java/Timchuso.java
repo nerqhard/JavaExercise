@@ -1,15 +1,15 @@
 public class Timchuso {
 
-    public static int demcs(int a) {
+    public int demcs(int a) {
         int count = 0;
-        while (a > 0) {
+        while (a >= 10) {
             a /= 10;
             count++;
         }
-        return count;
+        return count + 1;
     }
 
-    public static boolean valid(int n) {
+    public boolean valid(int n) {
         int sum = 0;
         int m = demcs(n);
         int b = n;
