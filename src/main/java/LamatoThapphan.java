@@ -1,67 +1,28 @@
+import java.util.HashMap;
+
 public class LamatoThapphan {
 
     public int lama_to_thapphan(String str) {
-        String s = str.toUpperCase();
-        int len = s.length();
-        s += " ";
-        int kq = 0;
-        for (int i = 0; i < len; i++) {
-            char ch = s.charAt(i);
-            char nch = s.charAt(i + 1);
-            switch (ch) {
-                case 'M':
-                    kq += 1000;
-                    break;
-                case 'C':
-                    if (nch == 'M') {
-                        kq += 900;
-                        i++;
-                    } else {
-                        if (nch == 'D') {
-                            kq += 400;
-                            i++;
-                        } else {
-                            kq += 100;
-                        }
-                    }
-                    break;
-                case 'D':
-                    kq += 500;
-                    break;
-                case 'X':
-                    if (nch == 'C') {
-                        kq += 90;
-                        i++;
-                    } else {
-                        if (nch == 'L') {
-                            kq += 40;
-                            i++;
-                        } else {
-                            kq += 10;
-                        }
-                    }
-                    break;
-                case 'L':
-                    kq += 50;
-                    break;
-                case 'V':
-                    kq += 5;
-                    break;
-                case 'I':
-                    if (nch == 'X') {
-                        kq += 9;
-                        i++;
-                    } else {
-                        if (nch == 'V') {
-                            kq += 4;
-                            i++;
-                        } else {
-                            kq += 1;
-                        }
-                    }
-                    break;
+        str = str.toUpperCase();
+        int intnum = 0;
+        int pre = 0;
+        HashMap<Character, Integer> hm = new HashMap<>();
+        hm.put('I', 1);
+        hm.put('X', 10);
+        hm.put('C', 100);
+        hm.put('M', 1000);
+        hm.put('V', 5);
+        hm.put('L', 50);
+        hm.put('D', 500);
+        for (int i = (str.length() - 1); i >= 0; i--) {
+            int temp = hm.get(str.charAt(i));
+            if (temp < pre) {
+                intnum -= temp;
+            } else {
+                intnum += temp;
             }
+            pre = temp;
         }
-        return kq;
+        return intnum;
     }
 }
