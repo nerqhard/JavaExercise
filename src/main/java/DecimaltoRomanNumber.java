@@ -26,12 +26,10 @@ public class DecimaltoRomanNumber {
 
         for (Map.Entry<Integer, String> sethmap : hmap.entrySet()) {
             int key = sethmap.getKey();
-            if (input / key != 0) {
-                for (int i = 0; i < input / key; i++) {
-                    s += hmap.get(key);
-                }
-                input %= key;
+            for (int i = 0; i < input / key; i++) {
+                s += hmap.get(key);
             }
+            input %= key;
         }
         return s;
     }
