@@ -13,5 +13,6 @@ public class Ex7_Kt_chuoi_conTest {
         Assert.assertEquals(new Ex7_Kt_chuoi_con().check_sub_str("Nguyen Quang Ha", "uang H"),8);
         Assert.assertEquals(new Ex7_Kt_chuoi_con().check_sub_str("Nguyen Quang Ha", "Nguy"),0);
         Assert.assertEquals(new Ex7_Kt_chuoi_con().check_sub_str("Nguyen Quang Ha", "uang h"),-1);
+        Assert.assertEquals(new Ex7_Kt_chuoi_con().check_sub_str("Nguye n", "Nguyen"),-1);
     }
 }
