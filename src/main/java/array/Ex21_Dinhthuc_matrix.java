@@ -6,13 +6,7 @@ public class Ex21_Dinhthuc_matrix {
         double result = 0;
 
         if (a.length == 1) {
-            result = a[0][0];
-            return result;
-        }
-
-        if (a.length == 2) {
-            result = a[0][0] * a[1][1] - a[0][1] * a[1][0];
-            return result;
+            return a[0][0];
         }
 
         for (int i = 0; i < a[0].length; i++) {
@@ -28,7 +22,7 @@ public class Ex21_Dinhthuc_matrix {
                     }
                 }
             }
-            result += a[0][i] * Math.pow(-1, (double) i) * det_matrix(temp);
+            result += (1 - i % 2 * 2) * a[0][i] * det_matrix(temp);
         }
         return result;
     }
