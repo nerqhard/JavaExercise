@@ -2,7 +2,7 @@ package string;
 
 public class Ex5_Xuat_hien_hon_2lan {
     public String xh_2lan(String str) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         String[] temp = str.split("[ ]");
         for (int i = 0; i < temp.length; i++) {
             int count = 0;
@@ -10,8 +10,8 @@ public class Ex5_Xuat_hien_hon_2lan {
                 if (temp[i].equals(temp[j])) {
                     count++;
                 }
-                if (count == 2) {
-                    result += temp[i] + ", ";
+                if ((count == 2)&&(!result.toString().contains(temp[i]))) {
+                    result.append(temp[i]).append(", ");
                     break;
                 }
             }
