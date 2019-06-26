@@ -10,7 +10,7 @@ public class Ex5_Xuat_hien_hon_2lan {
                 if (temp[i].equals(temp[j])) {
                     count++;
                 }
-                if ((count == 2)&&(!result.toString().contains(temp[i]))) {
+                if ((count == 2) && (!result.toString().contains(temp[i]))) {
                     result.append(temp[i]).append(", ");
                     break;
                 }
