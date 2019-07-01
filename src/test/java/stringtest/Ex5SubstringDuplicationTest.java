@@ -4,10 +4,10 @@ import org.junit.Assert;
 import org.junit.Test;
 import string.Ex5SubstringDuplication;
 
-public class Ex5_Xuat_hien_hon_2lanTest {
+public class Ex5SubstringDuplicationTest {
 
     @Test
-    public void test_xh_2lan() {
+    public void test_findDuplicated() {
 
         Ex5SubstringDuplication obj = new Ex5SubstringDuplication();
 
