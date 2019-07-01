@@ -8,6 +8,9 @@ public class Ex7_Kt_chuoi_con {
                 id++;
             } else {
                 id = 0;
+                if (str.charAt(i) == text.charAt(0)) {
+                    i--;
+                }
                 continue;
             }
             if (id == text.length()) {
