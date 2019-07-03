@@ -12,9 +12,6 @@ public class Ex15_FindNumBarcode {
                 oddNum += str.charAt(i);
             }
         }
-        if ((evenNum * 3 + oddNum) % 10 != 0) {
-            return 10 - (evenNum * 3 + oddNum) % 10;
-        }
-        return 0;
+        return (10 - (evenNum * 3 + oddNum) % 10) % 10;
     }
 }
