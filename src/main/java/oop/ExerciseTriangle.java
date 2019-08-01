@@ -28,7 +28,7 @@ public class ExerciseTriangle {
     }
 
     public String getType() {
-        if ((this.a + this.b > this.c) || (this.a + this.c > this.b) || (this.b + this.c > this.a)) {
+        if ((this.a + this.b > this.c) && (this.a + this.c > this.b) && (this.b + this.c > this.a)) {
             if ((this.a == this.b) && (this.a == this.c)) {
                 return "Tam giac Deu";
             }
