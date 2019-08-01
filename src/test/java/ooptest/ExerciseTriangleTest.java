@@ -6,11 +6,11 @@ import org.junit.Assert;
 
 public class ExerciseTriangleTest {
 
-    private ExerciseTriangle input = new ExerciseTriangle(4,4,4,10,10,4);
+    private ExerciseTriangle input = new ExerciseTriangle(4, 4, 4, 10, 10, 4);
 
     @Test
     public void test_getLength() {
-        Assert.assertEquals(input.getLength(4,10,10,4), 8.485, 0.001);
+        Assert.assertEquals(input.getLength(4, 10, 10, 4), 8.485, 0.001);
     }
 
     @Test
@@ -27,11 +27,11 @@ public class ExerciseTriangleTest {
 
     @Test
     public void test_getPerimeter() {
-        Assert.assertEquals(input.getPerimeter(), 20.485,0.001);
+        Assert.assertEquals(input.getPerimeter(), 20.485, 0.001);
     }
 
     @Test
     public void test_getArea() {
-        Assert.assertEquals(input.getArea(), 18.00,0.01);
+        Assert.assertEquals(input.getArea(), 18.00, 0.01);
     }
 }

@@ -33,10 +33,10 @@ public class ExerciseTriangle {
                 return "Tam giac Deu";
             }
 
-            if ((Math.round((this.c * this.c)*1000/1000) == Math.round(((this.a * this.a + this.b * this.b))*1000/1000)) ||
-                (Math.round((this.b * this.b)*1000/1000) == Math.round((this.a * this.a + this.c * this.c)*1000/1000)) ||
-                Math.round((this.a * this.a)*1000/1000) == Math.round((this.b * this.b + this.c * this.c)*1000/1000)) {
-                if((this.a - this.b) * (this.a - this.c) * (this.b - this.c) == 0) {
+            if ((Math.round((this.c * this.c) * 1000 / 1000) == Math.round(((this.a * this.a + this.b * this.b)) * 1000 / 1000)) ||
+                    (Math.round((this.b * this.b) * 1000 / 1000) == Math.round((this.a * this.a + this.c * this.c) * 1000 / 1000)) ||
+                    Math.round((this.a * this.a) * 1000 / 1000) == Math.round((this.b * this.b + this.c * this.c) * 1000 / 1000)) {
+                if ((this.a - this.b) * (this.a - this.c) * (this.b - this.c) == 0) {
                     return "Tam giac Vuong Can";
                 }
                 return "Tam giac Vuong";
@@ -45,17 +45,17 @@ public class ExerciseTriangle {
             if ((this.a - this.b) * (this.a - this.c) * (this.b - this.c) == 0) {
                 return "Tam giac Can";
             }
-                return "Tam giac thuong";
+            return "Tam giac thuong";
         }
         return "Tam giac khong hop le";
     }
 
-    public double getPerimeter(){
-        return this.a + this.b +this.c;
+    public double getPerimeter() {
+        return this.a + this.b + this.c;
     }
 
-    public double getArea(){
-        double p = getPerimeter()/2;
+    public double getArea() {
+        double p = getPerimeter() / 2;
         return Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c));
     }
 }
