@@ -1,5 +1,7 @@
 package oop.exercise2;
 
+import static oop.exercise2.GeoUtils.*;
+
 public class Triangle implements Shape {
     private double a;
     private double b;
