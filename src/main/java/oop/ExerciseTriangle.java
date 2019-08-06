@@ -5,11 +5,15 @@ public class ExerciseTriangle {
     private double b;
     private double c;
 
-    public double getLength(int a1, int b1, int a2, int b2) {
+    public static double getLength(double a1, double b1, double a2, double b2) {
         return Math.sqrt((a2 - a1) * (a2 - a1) + (b2 - b1) * (b2 - b1));
     }
 
-    public ExerciseTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+    public static boolean equals(double x, double y) {
+        return Math.round((x) * 1000 / 1000) == Math.round(((y)) * 1000 / 1000);
+    }
+
+    public ExerciseTriangle(double x1, double y1, double x2, double y2, double x3, double y3) {
         this.a = getLength(x1, y1, x2, y2);
         this.b = getLength(x1, y1, x3, y3);
         this.c = getLength(x2, y2, x3, y3);
@@ -28,22 +32,20 @@ public class ExerciseTriangle {
     }
 
     public String getType() {
-        if ((this.a + this.b > this.c) && (this.a + this.c > this.b) && (this.b + this.c > this.a)) {
-            if ((this.a == this.b) && (this.a == this.c)) {
-                return "Tam giac Deu";
+        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+            if (equals(a, b) && equals(a, c)) {
+                return "Tam giac deu";
             }
 
-            if ((Math.round((this.c * this.c) * 1000 / 1000) == Math.round(((this.a * this.a + this.b * this.b)) * 1000 / 1000)) ||
-                    (Math.round((this.b * this.b) * 1000 / 1000) == Math.round((this.a * this.a + this.c * this.c) * 1000 / 1000)) ||
-                    Math.round((this.a * this.a) * 1000 / 1000) == Math.round((this.b * this.b + this.c * this.c) * 1000 / 1000)) {
-                if ((this.a - this.b) * (this.a - this.c) * (this.b - this.c) == 0) {
-                    return "Tam giac Vuong Can";
+            if (equals(c * c, a * a + b * b) || equals(b * b, a * a + c * c) || equals(a * a, b * b + c * c)) {
+                if ((a - b) * (a - c) * (b - c) == 0) {
+                    return "Tam giac vuong can";
                 }
-                return "Tam giac Vuong";
+                return "Tam giac vuong";
             }
 
-            if ((this.a - this.b) * (this.a - this.c) * (this.b - this.c) == 0) {
-                return "Tam giac Can";
+            if ((a - b) * (a - c) * (b - c) == 0) {
+                return "Tam giac can";
             }
             return "Tam giac thuong";
         }
@@ -51,11 +53,11 @@ public class ExerciseTriangle {
     }
 
     public double getPerimeter() {
-        return this.a + this.b + this.c;
+        return a + b + c;
     }
 
     public double getArea() {
         double p = getPerimeter() / 2;
-        return Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c));
+        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
     }
 }
