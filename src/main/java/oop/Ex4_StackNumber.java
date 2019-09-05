@@ -20,6 +20,10 @@ public class Ex4_StackNumber<T> {
         return result;
     }
 
+    public T peek() {
+        return isEmpty() ? null : stackNumber.get(0);
+    }
+
     public boolean isEmpty() {
         return stackNumber.isEmpty();
     }
