@@ -35,7 +35,7 @@ public class Ex5_QueueNumberTest {
     }
 
     @Test
-    public void isEmpty() {
+    public void test_isEmpty() {
         Ex5_QueueNumber<Integer> queueNumber = new Ex5_QueueNumber<>();
         Assert.assertTrue(queueNumber.isEmpty());
 
